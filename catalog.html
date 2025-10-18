@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - GlowUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GlowUp</div>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Кошик (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="catalog-page">
+        <h1>Широкий Каталог Доглядової Косметики</h1>
+
+        <div class="filter-sidebar">
+            <h3>Фільтри </h3>
+            <ul>
+                <li><input type="checkbox" id="face"><label for="face">Для обличчя</label></li>
+                <li><input type="checkbox" id="body"><label for="body">Для тіла</label></li>
+                <li><input type="checkbox" id="hair"><label for="hair">Для волосся</label></li>
+            </ul>
+            <h4>Ціна:</h4>
+            <input type="range" min="100" max="2000" value="2000" id="price-range">
+            <p>До: <span id="price-value">2000</span> грн</p>
+        </div>
+
+        <div class="catalog-grid" id="product-catalog">
+            
+            <div class="product-card">
+                <img src="https://beautyderm.ua/content/images/32/536x536l50nn0/hidro-krem-skin-fiction-z-hialuronovoiu-kyslotoiu-ta-polunytseiu-20470302799903.jpg" alt="Зволожувальний крем">
+                <h3>Зволожувальний крем з гіалуроном</h3>
+                <p>650 грн</p>
+                <button class="add-to-cart-btn" data-id="1" data-name="Крем Гіалурон" data-price="650">Додати в кошик</button>
+            </div>
+            <div class="product-card">
+                <img src="https://media2.vsisvoi.ua/uploads/thumbs/catalog/products/2024/06/03/573430/gallery/thumb424_554.573430_6666abb6f13d66666abb6f13d7.webp" alt="Сироватка з вітаміном C">
+                <h3>Освітлювальна сироватка з Вітаміном C</h3>
+                <p>890 грн</p>
+                <button class="add-to-cart-btn" data-id="2" data-name="Сироватка Віт. C" data-price="890">Додати в кошик</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAcWYQznlPZQL6QxCe_xGSDG3EJWaJfibiNQ&s" alt="Гель для душу 'Океан'">
+                <h3>Гель для душу 'Океан'</h3>
+                <p>250 грн</p>
+                <button class="add-to-cart-btn" data-id="3" data-name="Гель для душу 'Океан'" data-price="250">Додати в кошик</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaPPZ865krz2eOQt-7dVRZjy0ff-Dzg8F3nQ&s" alt="Маска для волосся з кератином">
+                <h3>Маска для волосся з кератином</h3>
+                <p>580 грн</p>
+                <button class="add-to-cart-btn" data-id="4" data-name="Маска з кератином" data-price="580">Додати в кошик</button>
+            </div>
+            <div class="product-card">
+                <img src="https://medias.yves-rocher.ua/medias/?context=bWFzdGVyfGltYWdlc3wyNjM1MjJ8aW1hZ2UvanBlZ3xzeXNfbWFzdGVyL2ltYWdlcy9oZDUvaDRkLzk2OTcyNzYzOTU1NTB8M2FkM2E2ODA4ZDM4NDUzZjlkZjFlYWRlMDRkNGVlMjYzOTQxM2Y3M2JjY2YzMzQwZGRlZjliMGRkYzE1YTk0Zg&twic=v1/resize=960/background=white" alt="Нічний крем-регенератор">
+                <h3>Нічний крем-регенератор</h3>
+                <p>920 грн</p>
+                <button class="add-to-cart-btn" data-id="5" data-name="Нічний крем" data-price="920">Додати в кошик</button>
+            </div>
+            <div class="product-card">
+                <img src="https://tinitun.com.ua/files/resized/products/img_4795.1200x1200.jpg-1.1200x1200.webp" alt="Скраб для тіла з кавою">
+                <h3>Скраб для тіла з кавою</h3>
+                <p>340 грн</p>
+                <button class="add-to-cart-btn" data-id="6" data-name="Скраб з кавою" data-price="340">Додати в кошик</button>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GlowUp. Всі права захищені.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Невелика функція для відображення ціни діапазону
+        document.getElementById('price-range').addEventListener('input', (e) => {
+            document.getElementById('price-value').textContent = e.target.value;
+        });
+    </script>
+</body>
+</html>
