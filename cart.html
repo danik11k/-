@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик - GlowUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GlowUp</div>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Кошик (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <h1>Ваш Кошик</h1>
+        
+        <section class="cart-items" id="cart-items-container">
+            </section>
+        
+        <section class="cart-summary">
+            <h2>Підсумок Замовлення</h2>
+            <p>Загальна сума: <span id="cart-total">0</span> грн</p>
+            <button class="clear-cart-btn">Очистити Кошик</button>
+        </section>
+
+        <section class="checkout-form">
+            <h2>Оформлення Замовлення</h2>
+            <form id="order-form">
+                <label for="name">Ваше Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Адреса доставки:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+
+                <button type="submit" class="button primary-button">Підтвердити Замовлення</button>
+                <p id="order-message" style="color: green; display: none; margin-top: 15px;">Ваше замовлення успішно оформлено! Ми зв'яжемося з вами найближчим часом.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GlowUp. Всі права захищені.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
