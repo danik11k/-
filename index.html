@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowUp - Доглядова Косметика</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GlowUp</div>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Кошик (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="homepage">
+        <section class="hero">
+            <h1>Відкрийте Секрет Сяючої Шкіри</h1>
+            <p>Натуральні інгредієнти, передові формули. Подаруйте вашій шкірі найкраще.</p>
+            <a href="catalog.html" class="button">До Каталогу</a>
+        </section>
+
+        <section class="featured-products">
+            <h2>Наші Хіти Продажів</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="https://beautyderm.ua/content/images/32/536x536l50nn0/hidro-krem-skin-fiction-z-hialuronovoiu-kyslotoiu-ta-polunytseiu-20470302799903.jpg" alt="Зволожувальний крем">
+                    <h3>Зволожувальний крем з гіалуроном</h3>
+                    <p>650 грн</p>
+                    <button class="add-to-cart-btn" data-id="1" data-name="Крем Гіалурон" data-price="650">Додати в кошик</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://media2.vsisvoi.ua/uploads/thumbs/catalog/products/2024/06/03/573430/gallery/thumb424_554.573430_6666abb6f13d66666abb6f13d7.webp" alt="Сироватка з вітаміном C">
+                    <h3>Освітлювальна сироватка з Вітаміном C</h3>
+                    <p>890 грн</p>
+                    <button class="add-to-cart-btn" data-id="2" data-name="Сироватка Віт. C" data-price="890">Додати в кошик</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Зв'язатися з нами за номером: +380506734547</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
