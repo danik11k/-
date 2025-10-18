@@ -1,0 +1,284 @@
+/* Базові стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Рожевий колір косметики */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e65a9e;
+}
+
+/* Header та Navigation */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul a {
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav ul a:hover {
+    color: #ff69b4;
+}
+
+/* Main Content */
+main {
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section (index.html) */
+.hero {
+    background-color: #ffeef2;
+    padding: 60px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    color: #ff69b4;
+    font-size: 2.5em;
+}
+
+/* ... (початок файлу без змін) ... */
+
+/* Product Cards (index.html та catalog.html) */
+.featured-products h2, .catalog-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* *** ВИПРАВЛЕНО: ГАРАНТОВАНА СІТКА З АВТОПЕРЕНОСОМ *** */
+
+/* Це для Головної сторінки (index.html) */
+.product-list {
+    display: grid;
+    /* auto-fit/minmax: рядкове розміщення, автоперенос, мін. ширина 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Catalog Page Specifics (Макет сторінки: бічна панель + вміст) */
+.catalog-page {
+    display: grid;
+    /* 250px для бічної панелі, 1fr для гнучкої колонки з товарами */
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+/* Це для сторінки Каталогу (catalog.html) */
+.catalog-grid {
+    display: grid;
+    /* auto-fit/minmax: це має примусово переносити товари на новий рядок! */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px;
+}
+/* ******************************************************* */
+
+
+.product-card {
+    /* Тут картка має просто заповнити комірку сітки */
+    width: 100%; 
+    height: auto; /* Додано, щоб уникнути конфліктів */
+    
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #ff69b4;
+    margin-top: 0;
+}
+
+.product-card p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+/* Catalog Page Specifics (залишається Grid для макету сторінки) */
+.catalog-page {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+.filter-sidebar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+/* Cart Page Specifics */
+.cart-page h1 {
+    color: #ff69b4;
+    margin-bottom: 30px;
+}
+
+.cart-items-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h4 {
+    margin: 0;
+    color: #555;
+}
+
+.item-quantity input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.remove-item-btn {
+    background-color: #f44336;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-summary {
+    background-color: #ffeef2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.checkout-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.checkout-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"],
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Важливо для padding */
+}
+
+.primary-button {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
